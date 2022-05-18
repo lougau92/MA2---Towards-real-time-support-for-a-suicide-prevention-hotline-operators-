@@ -1,0 +1,17 @@
+name: dl-1
+ 
+dependencies:
+    - python=3.10
+    - scikit-learn
+    - scipy
+    - pandas
+    - matplotlib
+    - tqdm
+    - pyyaml
+    - ipython
+    - pip:
+        - torch
+        - torchvision
+        - tensorboard
+        # downgrade because of pytorch bug
+        - setuptools==59.5.0
