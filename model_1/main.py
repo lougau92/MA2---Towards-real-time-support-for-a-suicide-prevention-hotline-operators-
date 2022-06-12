@@ -10,8 +10,6 @@ import pandas as pd
 
 from submodules.TimeSeriesDL.utils.config import config
 
-#from model.brain_behaviour_classifier import BrainBehaviourClassifier
-
 from torch import nn
 from torch.autograd import Variable
 
@@ -20,7 +18,6 @@ from data.dataset import CDS_Dataset
 
 from model.linear_regression import MLP
 
-#config.register_model("BrainBehaviourClassifier", BrainBehaviourClassifier)
 #config.register_model("LinearModel", Linear)
 config_dict = None
 
@@ -173,13 +170,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="This program trains and tests a deep " +
                                                  "learning model to regress on CDS data")
     parser.add_argument("--config", dest="config", help="Set path to config file.")
-
-
     args = parser.parse_args()
 
     if args.config:
         config_dict = config.get_args(args.config)
-        test()
-        #train()
+        # test()
+        # train()
     #else:
         #raise ValueError("Config file not set. Use '--config <path_to_file>' to load a configuration.")
