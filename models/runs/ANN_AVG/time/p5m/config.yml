@@ -1,0 +1,22 @@
+device: cpu
+dataset_args:
+  d_type: train
+  dataset_path: /home/tom/Projects/MaastrichtAI/research_project2/MA2---Towards-real-time-support-for-a-suicide-prevention-hotline-operators-/filtered_conv
+ 
+  negative: False
+
+  sequence_ratio: 0.33
+  fixed_seq_length: False
+  fixed_length: 2
+
+  window_time: True
+  window_time_amount: 5
+
+  num_cds_window: False
+  drop_least_freq_cds: True
+dataloader_args:
+  num_workers: 6
+  batch_size: 128
+  shuffle: True
+train_epochs: 4
+evaluation: None 

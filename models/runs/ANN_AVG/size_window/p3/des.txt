@@ -1,0 +1,28 @@
+
+
+config settings
+
+device: cuda
+dataset_args:
+  d_type: train
+  sequence_ratio: 0.15
+  dataset_path: /home/tom/Projects/MaastrichtAI/research_project2/MA2---Towards-real-time-support-for-a-suicide-prevention-hotline-operators-/filtered_conv
+
+dataloader_args:
+  num_workers: 6
+  batch_size: 128
+  shuffle: True
+train_epochs: 10
+evaluation: None 
+
+
+lr rate 1e-3
+
+BREZ
+torch.nn.utils.clip_grad_norm_(self.parameters(), 1) was used after 
+  backward propagation
+
+
+
+around 82% acuracy
+  positive
